@@ -5,6 +5,6 @@ type CreateUserAccount = {
 
 }
 
-type LoginUserAccount{
-    
+type LoginUserAccount = {
+
 }
