@@ -51,15 +51,19 @@ type LoginUserAccount = {
       try {
         const data = await this.getCurrentUser();
         return Boolean(data)
-      } catch (error) {
-        
-      }
-
+      } catch (error) {}
 
         return false
     }
 
-    async getCurrentUser(){}
+    async getCurrentUser(){
+        try {
+          return   account.get() 
+        } catch (error) {
+            console.log("getCurrentUser error: "+ error);
+        }
+        return null;
+    }
 
     async logout(){}
 
