@@ -20,3 +20,10 @@ type LoginUserAccount = {
   .setProject(conf.appwriteProjectId);
 
   export const account = new Account(appwriteClient)
+
+  export class appwriteService{
+    //create a new record of user inside appwrite
+    async createUserAccount ({email,password,name}:CreateUserAccount){
+        
+    }
+  }
