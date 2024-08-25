@@ -37,10 +37,22 @@ type LoginUserAccount = {
     }
 
     async login({email,password}:LoginUserAccount){
+        try {
+         return  await    account.createEmailPasswordSession(email,password);
+            
+        } catch (error:any) {
+            throw error
+            
+        }
 
     }
    
-    async isLoggedIn(){}
+    async isLoggedIn():Promise<boolean>{
+
+
+
+        return false
+    }
 
     async getCurrentUser(){}
 
