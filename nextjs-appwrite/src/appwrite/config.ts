@@ -44,4 +44,6 @@ type LoginUserAccount = {
 
     async getCurrentUser(){}
 
+    async logout(){}
+
   }
