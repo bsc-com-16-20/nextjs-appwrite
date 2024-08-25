@@ -24,6 +24,10 @@ type LoginUserAccount = {
   export class appwriteService{
     //create a new record of user inside appwrite
     async createUserAccount ({email,password,name}:CreateUserAccount){
-        
+        try {
+           await account.create(ID.unique(),email,password,name) 
+        } catch (error) {
+            throw error
+        }
     }
   }
