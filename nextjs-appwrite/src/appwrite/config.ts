@@ -9,5 +9,7 @@ type CreateUserAccount = {
 }
 
 type LoginUserAccount = {
+    email:string,
+    password:string,
 
 }
