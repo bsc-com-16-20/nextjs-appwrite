@@ -35,7 +35,11 @@ type LoginUserAccount = {
             throw error
         }
     }
+
     async login({email,password}:LoginUserAccount){
-        
+
     }
+   
+    async isLoggedIn(){}
+
   }
