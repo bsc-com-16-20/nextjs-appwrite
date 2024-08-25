@@ -65,6 +65,12 @@ type LoginUserAccount = {
         return null;
     }
 
-    async logout(){}
+    async logout(){
+        try {
+           return await account.deleteSession("current") 
+        } catch (error) {
+            console.log("logout error:" + error )
+        }
+    }
 
   }
