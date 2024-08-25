@@ -21,7 +21,7 @@ type LoginUserAccount = {
 
   export const account = new Account(appwriteClient)
 
-  export class appwriteService{
+  export class AppwriteService{
     //create a new record of user inside appwrite
     async createUserAccount ({email,password,name}:CreateUserAccount){
         try {
@@ -74,3 +74,7 @@ type LoginUserAccount = {
     }
 
   }
+
+  const appwriteService = new AppwriteService()
+
+  export  default appwriteService
