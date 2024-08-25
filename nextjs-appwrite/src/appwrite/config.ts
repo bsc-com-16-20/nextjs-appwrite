@@ -13,3 +13,7 @@ type LoginUserAccount = {
     password:string,
 
 }
+
+  const appwriteClient = new Client()
+
+  appwriteClient.setEndpoint(conf.appwriteUrl)
