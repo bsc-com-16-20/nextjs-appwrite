@@ -25,9 +25,17 @@ type LoginUserAccount = {
     //create a new record of user inside appwrite
     async createUserAccount ({email,password,name}:CreateUserAccount){
         try {
-           await account.create(ID.unique(),email,password,name) 
+           const userAccount =await account.create(ID.unique(),email,password,name)
+           if(userAccount) {
+            return this.login({email,password})
+           } else{
+             return userAccount
+           }
         } catch (error) {
             throw error
         }
+    }
+    async login({email,password}:LoginUserAccount){
+        
     }
   }
