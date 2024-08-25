@@ -42,4 +42,6 @@ type LoginUserAccount = {
    
     async isLoggedIn(){}
 
+    async getCurrentUser(){}
+
   }
