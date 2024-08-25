@@ -16,4 +16,4 @@ type LoginUserAccount = {
 
   const appwriteClient = new Client()
 
-  appwriteClient.setEndpoint(conf.appwriteUrl)
+  appwriteClient.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectId)
