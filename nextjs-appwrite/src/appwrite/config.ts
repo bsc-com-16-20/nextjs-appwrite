@@ -48,7 +48,12 @@ type LoginUserAccount = {
     }
    
     async isLoggedIn():Promise<boolean>{
-
+      try {
+        const data = await this.getCurrentUser();
+        return Boolean(data)
+      } catch (error) {
+        
+      }
 
 
         return false
