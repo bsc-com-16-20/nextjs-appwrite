@@ -5,7 +5,8 @@ import Header from "@/components/Header";
 import { AuthProvider } from "@/context/authContext";
 import React,{useEffect,useState} from "react";
 
-const ProtectedLayout = ({children}:React.ReactNode) =>{
+const ProtectedLayout = ({children,}:
+    {children:React.ReactNode}) => {
     const[authStatus,setAuthStatus] = useState(false)
     const[loader,setLoader] = useState(true)
 
